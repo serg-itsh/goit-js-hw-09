@@ -24,6 +24,7 @@ const timer = new CountdownTimer({
 console.log(new Date());
 // дата в мілісекундах
 console.log(Date.now());
+console.log(Date.now(0));
 // // If using flatpickr in a framework, its recommended to pass the element directly
 // flatpickr(element, {});
 
