@@ -9,13 +9,6 @@ const stopBtn = document.querySelector('[data-stop]');
 console.log(stopBtn);
 // 3 звертаємося до body
 const body = document.querySelector('body');
-//
-// startBtn.addEventListener('click', event => {
-//   //   console.dir(event);
-//   const colory = getRandomHexColor();
-//   body.style.backgroundColor = colory;
-//   //   spanColor.textContent = colory;
-// });
 // codepen
 let timerId = null;
 

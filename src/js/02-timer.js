@@ -42,6 +42,7 @@ flatpickr(date, {
       //   window.alert('Please choose a date in the future');
     } else {
       button.disabled = false;
+      //   date.disabled = false;
 
       // console.log(selectedDates[0]);
     }
@@ -55,6 +56,8 @@ function updateTimer() {
     const currentTime = new Date(date.value);
     const delta = currentTime - Date.now();
     // console.log(delta);
+    button.disabled = true;
+    date.disabled = true;
     //
     let { days, hours, minutes, seconds } = convertMs(delta);
     //
@@ -63,11 +66,13 @@ function updateTimer() {
     minute.textContent = minutes < 10 ? '0' + minutes : minutes;
     second.textContent = seconds < 10 ? '0' + seconds : seconds;
     //
-    if (delta < 1000) {
+    if (delta <= 1000) {
       clearInterval(timerId);
 
       button.disabled = true;
+      date.disabled = true;
     }
+    // button.disabled = false;
   }, 1000);
 }
 //
